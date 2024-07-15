@@ -136,6 +136,15 @@
 .img-section-main{
     height: calc(100vh - 80px);
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-inline-start: 30px;
+}
+.img-section-main img{
+    height: 60px;
+    width: 90px;
+    margin: 2px;
+}
+.img-section-main div{
+    display: inline-block;
+    cursor: pointer;
 }
