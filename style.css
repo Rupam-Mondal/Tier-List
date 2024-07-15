@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.heading{
+    width: 100vw;
+    height: 70px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Tier-section{
+    display: flex;
+    height: calc(100vh - 70px);
+    width: 1000px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.img-section{
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100vh - 70px);
+    width: calc(100vw - 1000px);
+    background-color: black;
+}
+.Tiers{
+    height: 90px;
+    width: 650px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+.addition{
+    height: 140px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addition button{
+    height: 33%;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(to bottom , #5d5dde , #87CEFA);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    font-weight: 700;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.addition button:hover{
+    transform: scale(1.1);
+}
+.Tier-name{
+    height: 100%;
+    width: 150px;
+    background-color: aqua;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.input-user input {
+    height: 25px;
+    width: 170px;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    border: none;
+    outline: 2px solid rgb(143, 143, 235);
+    transition: outline 0.3s ease;
+}
+
+.input-user input:focus {
+    outline: 2px solid blue;
+}
