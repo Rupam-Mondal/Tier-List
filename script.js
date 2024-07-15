@@ -15,9 +15,6 @@ tieraddbutton.addEventListener('click' , (e) => {
 function tiercreation(){
     const newtierlist = document.createElement('div')
     newtierlist.classList.add('Tiers')
-
-    console.log(newtierlist);
-
     const tierparent = document.querySelector(".Tier-section")
 
     tierparent.appendChild(newtierlist)
@@ -35,6 +32,8 @@ function tiercreation(){
     tiername.appendChild(name)
     name.textContent = usergiventiername.value
     usergiventiername.value = ""
+
+    setupdropzone(tierimage)
 }
 
 //All work of image addition
@@ -58,19 +57,40 @@ function addimage(url){
     imagediv.appendChild(newimage)
     const parentimgsection = document.querySelector(".img-section-main")
     parentimgsection.appendChild(imagediv)
+    setupfordrag(imagediv)
 }
 
 //All work of drag event
 
-const allimages = document.getElementsByClassName("realimage")
-console.log(allimages)
+// const allimagesdiv = document.getElementsByClassName("realimage")
 
-for(const iterator of allimages){
-    setupfordrag(iterator)
+
+// for(const iterator of allimagesdiv){
+//     setupfordrag(iterator)
+// }
+
+let currdragitem;
+function setupfordrag(iterator){
+    iterator.addEventListener('dragstart' , (event) => {
+        currdragitem = event.target.parentNode
+    })
+
+    iterator.addEventListener('dblclick' , (event) => {
+        const parent = event.target.parentNode
+        const nontiersection = document.querySelector(".img-section-main")
+        nontiersection.appendChild(parent)
+    })
 }
 
-function setupfordrag(iterator){
-    iterator.addEventListener('dragstart' , () => {
-        
+//Inside tier list
+
+function setupdropzone(imgdropsection){
+    imgdropsection.addEventListener('drop' , (event) => {
+        event.preventDefault()
+    })
+
+    imgdropsection.addEventListener('dragover' , (event) => {
+        console.log("Done")
+        event.target.appendChild(currdragitem)
     })
 }

@@ -148,3 +148,10 @@
     display: inline-block;
     cursor: pointer;
 }
+
+.Tier-img .realimage img{
+    margin: 2px;
+    height: 100%;
+    box-sizing: border-box;
+    width: 90px;
+}
