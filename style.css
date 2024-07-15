@@ -27,10 +27,10 @@
 }
 .img-section{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     height: calc(100vh - 70px);
     width: calc(100vw - 1000px);
-    background-color: black;
+    border-left: 1px solid black;
 }
 .Tiers{
     height: 90px;
@@ -59,6 +59,11 @@
     font-weight: 700;
     color: white;
     font-size: 0.9rem;
+}
+.Tier-img{
+    height: 100%;
+    width: calc(100% - 150px);
+    display: flex;
 }
 
 .addition button:hover{
@@ -92,4 +97,45 @@
 
 .input-user input:focus {
     outline: 2px solid blue;
+}
+
+.img-addition{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-addition input{
+    height: 25px;
+    width: 140px;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    border: none;
+    outline: 2px solid rgb(143, 143, 235);
+    transition: outline 0.3s ease;
+}
+
+.new-img{
+    height: 54%;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(to bottom, #5d5dde, #87CEFA);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    font-weight: 700;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.img-section-main{
+    height: calc(100vh - 80px);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
