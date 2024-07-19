@@ -23,18 +23,24 @@ function tiercreation(){
     let random = addrandomcolor()
     tiername.style.backgroundColor = random
 
+    const delbtn = document.createElement('div')
+    delbtn.classList.add('deltier')
+    delbtn.innerHTML = '<i class="fa-solid fa-trash"></i>'
     const tierimage = document.createElement('div')
     tierimage.classList.add('Tier-img')
 
     newtierlist.appendChild(tiername)
     newtierlist.appendChild(tierimage)
+    newtierlist.appendChild(delbtn)
 
     const name = document.createElement('p')
     name.classList.add("Tier-name-user")
     tiername.appendChild(name)
     name.textContent = usergiventiername.value
     usergiventiername.value = ""
-
+    delbtn.addEventListener('click' , () => {
+        newtierlist.style.display = "none"
+    })
     setupdropzone(tierimage)
 }
 
