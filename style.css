@@ -72,7 +72,6 @@
 .Tier-name{
     height: 100%;
     width: 150px;
-    background-color: aqua;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     display: flex;

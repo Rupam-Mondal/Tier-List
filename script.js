@@ -20,6 +20,8 @@ function tiercreation(){
     tierparent.appendChild(newtierlist)
     const tiername = document.createElement('div')
     tiername.classList.add("Tier-name")
+    let random = addrandomcolor()
+    tiername.style.backgroundColor = random
 
     const tierimage = document.createElement('div')
     tierimage.classList.add('Tier-img')
@@ -93,4 +95,14 @@ function setupdropzone(imgdropsection){
         console.log("Done")
         event.target.appendChild(currdragitem)
     })
+}
+
+//Random color feature
+function addrandomcolor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }
